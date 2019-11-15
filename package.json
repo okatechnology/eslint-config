@@ -1,5 +1,5 @@
 {
-  "name": "@oka_technology/eslint-config",
+  "name": "@okatechnology/eslint-config",
   "version": "0.0.3",
   "description": "oka's eslint",
   "main": ".eslintrc.js",
