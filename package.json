@@ -1,0 +1,41 @@
+{
+  "name": "@oka_technology/eslint-config",
+  "version": "0.0.3",
+  "description": "oka's eslint",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okatechnology/eslint-config.git"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "author": "Kaoru Okazoe (https://github.com/okatechnology)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okatechnology/eslint-config/issues"
+  },
+  "homepage": "https://github.com/okatechnology/eslint-config#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.11",
+    "react": "^16.11.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.19.0"
+  }
+}
