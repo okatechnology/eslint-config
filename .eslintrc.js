@@ -37,14 +37,17 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
-    'prettier/prettier': ['error', prettierrc, { "usePrettierrc": false }],
+    'prettier/prettier': ['error', prettierrc, {
+      "usePrettierrc": false
+    }],
     'no-console': 'error',
     'no-undef': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {
-      argsIgnorePattern : '^_',
+      argsIgnorePattern: '^_',
     }],
     '@typescript-eslint/explicit-function-return-type': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     'react/jsx-uses-vars': 'error',
     'react/jsx-uses-react': 'error',
     'react-hooks/rules-of-hooks': 'error',
