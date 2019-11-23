@@ -45,7 +45,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', {
       argsIgnorePattern: '^_',
     }],
-    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     'react/jsx-uses-vars': 'error',
     'react/jsx-uses-react': 'error',
