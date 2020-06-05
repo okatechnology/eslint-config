@@ -51,5 +51,6 @@ module.exports = {
     'react/jsx-uses-react': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'off',
+    'react/prop-types': 'off',
   }
 };
