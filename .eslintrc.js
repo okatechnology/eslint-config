@@ -47,6 +47,7 @@ module.exports = {
     }],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
     'react/jsx-uses-vars': 'error',
     'react/jsx-uses-react': 'error',
     'react-hooks/rules-of-hooks': 'error',
