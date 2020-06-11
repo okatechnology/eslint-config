@@ -36,9 +36,14 @@ module.exports = {
     'prettier',
     '@typescript-eslint',
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     'prettier/prettier': ['error', prettierrc, {
-      "usePrettierrc": false
+      'usePrettierrc': false
     }],
     'no-console': 'error',
     'no-undef': 'off',
