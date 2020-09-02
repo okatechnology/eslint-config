@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const prettierrc = require('./.prettierrc.js');
 
 module.exports = {
@@ -30,26 +33,28 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    'react-hooks',
-    'prettier',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint'],
   settings: {
     react: {
       version: 'detect',
     },
   },
   rules: {
-    'prettier/prettier': ['error', prettierrc, {
-      'usePrettierrc': false
-    }],
+    'prettier/prettier': [
+      'error',
+      prettierrc,
+      {
+        usePrettierrc: false,
+      },
+    ],
     'no-console': 'error',
     'no-undef': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', {
-      argsIgnorePattern: '^_',
-    }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+      },
+    ],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
@@ -59,5 +64,5 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'react/prop-types': 'off',
     'react/no-children-prop': 'off',
-  }
+  },
 };
