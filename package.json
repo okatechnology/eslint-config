@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/okatechnology/eslint-config#readme",
   "devDependencies": {
-    "@types/react": "^16.9.11",
-    "react": "^16.11.0",
-    "typescript": "^3.7.2"
+    "@types/react": "^latest",
+    "react": "^latest",
+    "typescript": "^latest"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "latest",

@@ -30,7 +30,7 @@ module.exports = {
       jsx: true,
     },
     project: './tsconfig.json',
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
   plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint'],
@@ -41,13 +41,13 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': [
-      'error',
+      'warn',
       prettierrc,
       {
         usePrettierrc: false,
       },
     ],
-    'no-console': 'error',
+    'no-console': 'warn',
     'no-undef': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
