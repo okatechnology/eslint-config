@@ -73,6 +73,5 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     'react/prop-types': 'off',
     'react/no-children-prop': 'off',
-    'jsx-a11y/rule-name': 'error',
   },
 };
