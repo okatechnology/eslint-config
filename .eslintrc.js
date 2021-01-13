@@ -19,6 +19,7 @@ module.exports = {
     'prettier',
     'prettier/@typescript-eslint',
     'prettier/react',
+    'plugin:jsx-a11y/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -33,7 +34,13 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', 'prettier', '@typescript-eslint'],
+  plugins: [
+    'react',
+    'react-hooks',
+    'prettier',
+    '@typescript-eslint',
+    'jsx-a11y',
+  ],
   settings: {
     react: {
       version: 'detect',
@@ -50,7 +57,7 @@ module.exports = {
     'no-console': 'warn',
     'no-undef': 'off',
     '@typescript-eslint/no-unused-vars': [
-      'error',
+      'warn',
       {
         argsIgnorePattern: '^_',
       },
@@ -66,5 +73,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     'react/prop-types': 'off',
     'react/no-children-prop': 'off',
+    'jsx-a11y/rule-name': 'error',
   },
 };
