@@ -2,7 +2,7 @@
   "name": "@okatechnology/eslint-config",
   "version": "1.0.0",
   "description": "oka's eslint",
-  "main": ".eslintrc.js",
+  "main": "index.js",
   "scripts": {
     "test": "eslint"
   },
@@ -20,9 +20,10 @@
   },
   "homepage": "https://github.com/okatechnology/eslint-config#readme",
   "devDependencies": {
+    "@okatechnology/eslint-config": "^1.0.0",
     "@types/react": "latest",
     "react": "latest",
-    "typescript": "latest"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.48.2",
