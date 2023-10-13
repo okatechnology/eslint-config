@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/okatechnology/eslint-config#readme",
   "devDependencies": {
-    "@okatechnology/eslint-config": "^1.0.0",
+    "@okatechnology/eslint-config": "^1.0.1",
     "@types/react": "latest",
     "react": "latest",
     "typescript": "^5.2.2"
