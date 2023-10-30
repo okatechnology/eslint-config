@@ -1,3 +1,4 @@
 **/*
-!.eslintrc.js
-!.prettierrc.js
+!eslintrc*.js
+!prettierrc.js
+!tsconfig.*.json
