@@ -2,18 +2,19 @@ name: Publish Package
 on:
   push:
     tags:
-      - 'v*'  # "v" で始まるタグすべてを対象にします
+      - 'v*'
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: main
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '20'
 
