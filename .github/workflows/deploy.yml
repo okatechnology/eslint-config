@@ -2,30 +2,39 @@ name: Publish Package
 on:
   push:
     tags:
-      - 'v*'
+      - 'v*'  # "v" で始まるタグすべてを対象にします
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '20'
 
-      - name: Install dependencies and build
-        working-directory: ./package
-        run: |
-          npm ci
-          npm run build
-
       - name: Update package version
         working-directory: ./package
         run: |
           VERSION=${GITHUB_REF#refs/tags/v}
-          npm version $VERSION --no-git-tag-version
+          jq ".version = \"$VERSION\"" package.json > temp.json && mv temp.json package.json
+          npm install  # package-lock.json の更新
+
+      - name: Commit updated package.json
+        working-directory: ./package
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add package.json package-lock.json
+          git commit -m "Update package version to $VERSION"
+
+      - name: Push updated package.json
+        working-directory: ./package
+        run: git push origin main
 
       - name: Authenticate to GitHub Packages
         working-directory: ./package
