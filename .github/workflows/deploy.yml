@@ -1,0 +1,36 @@
+name: Publish Package
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install dependencies and build
+        working-directory: ./package
+        run: |
+          npm ci
+          npm run build
+
+      - name: Update package version
+        working-directory: ./package
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          npm version $VERSION --no-git-tag-version
+
+      - name: Authenticate to GitHub Packages
+        working-directory: ./package
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+
+      - name: Publish to GitHub Packages
+        working-directory: ./package
+        run: npm publish --registry=https://npm.pkg.github.com/

@@ -20,7 +20,7 @@ module.exports = {
     ecmaVersion: 2024,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'import', 'unused-imports', 'import-access'],
+  plugins: ['@typescript-eslint', 'import', 'unused-imports'],
   rules: {
     curly: ['warn', 'multi-line'],
     'no-console': 'warn',
@@ -94,12 +94,5 @@ module.exports = {
       },
     ],
     'unused-imports/no-unused-imports-ts': 'warn',
-    'import-access/jsdoc': [
-      'error',
-      {
-        indexLoophole: false,
-        filenameLoophole: true,
-      },
-    ],
   },
 };
