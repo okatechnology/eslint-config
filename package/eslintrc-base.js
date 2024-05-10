@@ -28,7 +28,6 @@ module.exports = {
     'no-restricted-imports': ['warn', { patterns: ['../', './'] }],
     'prefer-template': 'error',
     'array-callback-return': ['error', { checkForEach: true }],
-    '@typescript-eslint/no-unnecessary-condition': 'warn',
     '@typescript-eslint/no-unused-vars': [
       'warn',
       {
