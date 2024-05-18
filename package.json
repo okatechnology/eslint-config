@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@okatechnology/eslint-config": "^1.3.0"
+    "@okatechnology/eslint-config": "^1.4.0"
   }
 }
