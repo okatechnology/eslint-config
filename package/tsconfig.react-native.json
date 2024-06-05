@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig.react.json",
   "compilerOptions": {
-    "target": "ESNext",
     "jsx": "react-native",
     "plugins": [{
       "name": "typescript-styled-plugin",
