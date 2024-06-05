@@ -2,5 +2,9 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
+    "moduleResolution": "Bundler",
+    "plugins": [{
+      "name": "next"
+    }],
   },
 }

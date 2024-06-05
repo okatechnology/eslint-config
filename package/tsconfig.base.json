@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "CommonJS",
-    "target": "es5",
+    "module": "ESNext",
+    "target": "ESNext",
     "sourceMap": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
@@ -16,13 +16,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "lib": ["DOM", "ESNext"],
-    "plugins": [{
-      "name": "eslint-plugin-import-access"
-    }]
+    "lib": ["DOM","DOM.Iterable", "ESNext"],
+    "allowImportingTsExtensions": true,
+    "incremental": true,
   },
   "exclude": [
     "node_modules"
