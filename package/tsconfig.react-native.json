@@ -1,7 +1,6 @@
 {
-  "extends": "./tsconfig.react.json",
+  "extends": ["./tsconfig.react.json", "expo/tsconfig.base"],
   "compilerOptions": {
-    "jsx": "react-native",
     "plugins": [{
       "name": "typescript-styled-plugin",
       "lint": {
