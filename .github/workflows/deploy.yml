@@ -19,14 +19,12 @@ jobs:
           node-version: '20'
 
       - name: Update package version
-        working-directory: ./package
         run: |
           VERSION=${GITHUB_REF#refs/tags/v}
           jq ".version = \"$VERSION\"" package.json > temp.json && mv temp.json package.json
           npm install  # package-lock.json の更新
 
       - name: Commit updated package.json
-        working-directory: ./package
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
@@ -34,13 +32,10 @@ jobs:
           git commit -m "Update package version to $VERSION"
 
       - name: Push updated package.json
-        working-directory: ./package
         run: git push origin main
 
       - name: Authenticate to GitHub Packages
-        working-directory: ./package
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
 
       - name: Publish to GitHub Packages
-        working-directory: ./package
         run: npm publish --registry=https://npm.pkg.github.com/
