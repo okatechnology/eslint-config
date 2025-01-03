@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Setup .npmrc
+        env:
+          NPM_RC: ${{ secrets.NPM_RC }}
+        run: echo "$NPM_RC" >> .npmrc
+
       - name: Update package version
         run: |
           VERSION=${GITHUB_REF#refs/tags/v}
