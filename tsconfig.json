@@ -1,4 +1,4 @@
 {
   "extends": "./tsconfig/tsconfig.react.json",
-  "include": ["**/*", "eslint.config.js", ".tmp"],
+  "include": ["**/*", "eslint.config.js"],
 }

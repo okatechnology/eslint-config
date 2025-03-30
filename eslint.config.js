@@ -1,3 +1,3 @@
-import { eslintConfigNode } from './eslintrc/eslint.config.node.js';
+import { eslintConfigNode } from './eslintConfig/eslint.config.node.js';
 
 export default eslintConfigNode;
