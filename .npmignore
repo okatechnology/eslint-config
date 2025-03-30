@@ -1,5 +1,5 @@
 **/*
-!eslintrc/**
+!eslintConfig/**
 !tsConfig/**
 !prettierrc/**
 !LICENSE.txt
