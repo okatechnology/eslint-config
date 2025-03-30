@@ -1,10 +1,12 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    // Modules
+    "module": "preserve",
+    "moduleResolution": "bundler",
+
+    // Language and Environment
     "jsx": "preserve",
-    "moduleResolution": "Bundler",
-    "plugins": [{
-      "name": "next"
-    }],
+    "lib": ["DOM", "ESNext"],
   },
 }
