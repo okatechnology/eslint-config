@@ -23,6 +23,7 @@
     "noEmit": true,
 
     // JavaScript Support
+    "allowJs": true,
 
     // Editor Support
     "disableSizeLimit": true,
@@ -34,7 +35,7 @@
     "verbatimModuleSyntax": true,
 
     // Backwards Compatibility
-    
+
     // Language and Environment
     "lib": ["ESNext"],
     "target": "es6",
@@ -48,7 +49,11 @@
 
     // Completeness
     "skipLibCheck": true,
-    },
+
+    "plugins": [{
+      "name": "eslint-plugin-import-access"
+    }]
+  },
   "exclude": [
     "node_modules"
   ]

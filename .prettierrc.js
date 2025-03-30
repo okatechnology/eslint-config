@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@okatechnology/eslint-config/prettierrc'),
+  ...require('./prettierrc/prettierrc'),
 };
