@@ -1,5 +1,4 @@
 {
-  "extends": "@okatechnology/eslint-config/tsconfig.node.json",
-  "include": ["/**/*", ".eslintrc.js"],
-  "compilerOptions": {}
+  "extends": "./tsconfig/tsconfig.react.json",
+  "include": ["**/*", "eslint.config.js"],
 }

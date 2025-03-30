@@ -1,27 +1,58 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "module": "NodeNext",
-    "target": "ESNext",
-    "sourceMap": true,
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
+    // Type Checking
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "src/types"
-    ],
-    "downlevelIteration": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "moduleResolution": "NodeNext",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "lib": ["DOM","DOM.Iterable", "ESNext"],
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+
+    // Modules
     "allowImportingTsExtensions": true,
+    "module": "nodenext",
+    "noUncheckedSideEffectImports": true,
+    "resolveJsonModule": true,
+
+    // Emit
+    "downlevelIteration": true,
+    "noEmit": true,
+
+    // JavaScript Support
+    "allowJs": true,
+
+    // Editor Support
+    "disableSizeLimit": true,
+
+    // Interop Constraints
+    "erasableSyntaxOnly": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+
+    // Backwards Compatibility
+
+    // Language and Environment
+    "lib": ["ESNext"],
+    "target": "es6",
+
+    // Compiler Diagnostics
+
+    // Projects
     "incremental": true,
+
+    // Output Formatting
+
+    // Completeness
+    "skipLibCheck": true,
+
+    "plugins": [{
+      "name": "eslint-plugin-import-access"
+    }]
   },
   "exclude": [
     "node_modules"

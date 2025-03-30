@@ -1,41 +1,28 @@
-# eslintrc
+# ESLint / Prettier / TypeScript Config
 
 ## Usage
 
 ### Config ESLint
 
-create `.eslintrc.js` at your project root and write the following.
+create `eslint.config.js` at your project root.
 
-#### React Project
+| Project Type | Exported Config Name | Config File Path   |
+| ------------ | ------------------- | --------------- |
+| React | `eslintConfigReact` | `eslintConfig/eslint.config.react.js` |
+| React Native | `eslintConfigReactNative` | `eslintConfig/eslint.config.reactNative.js` |
+| Expo | `eslintConfigReactNativeExpo` | `eslintConfig/eslint.config.reactNativeExpo.js` |
+| Next.js | `eslintConfigReactNext` | `eslintConfig/eslint.config.reactNext.js` |
+| Node.js | `eslintConfigNode` | `eslintConfig/eslint.config.node.js` |
 
-```javascript:.eslintrc.js
-module.exports = {
-  extends: ['./node_modules/@okatechnology/eslint-config/eslintrc/eslintrc-react'],
-}
-```
+If you want to config eslint for React project, write the following.
 
-#### React Native Project
+```javascript:.eslint.config.js
+import { eslintConfigReact } from '@okatechnology/eslint-config/eslintConfig/eslint.config.react.js';
 
-```javascript:.eslintrc.js
-module.exports = {
-  extends: ['./node_modules/@okatechnology/eslint-config/eslintrc/eslintrc-react-native'],
-}
-```
-
-#### Next.js Project
-
-```javascript:.eslintrc.js
-module.exports = {
-  extends: ['./node_modules/@okatechnology/eslint-config/eslintrc/eslintrc-react-next'],
-}
-```
-
-#### Node.js Project
-
-```javascript:.eslintrc.js
-module.exports = {
-  extends: ['./node_modules/@okatechnology/eslint-config/eslintrc/eslintrc-node'],
-}
+export default [
+  ...eslintConfigReact,
+  /* your config */
+];
 ```
 
 ### Config Prettier
@@ -50,40 +37,19 @@ module.exports = {
 
 ### Config TypeScript
 
-create `tsconfig.json` at your project root and write the following.
+create `tsconfig.json` at your project root.
 
-#### React Project
+| Project Type | Config File Path |
+| ------------ | --------------- |
+| React / Next.js | `tsconfig/tsconfig.react.json` |
+| React Native / Expo | `tsconfig/tsconfig.react-native.json` |
+| Node.js | `tsconfig/tsconfig.node.json` |
+
+If you want to config tsconfig for React project, write the following.
 
 ```json:tsconfig.json
 {
   "extends": "@okatechnology/eslint-config/tsconfig/tsconfig.react.json",
-  "include": [...],
-  "compilerOptions": {
-    "baseUrl": "./"
-  }
-}
-```
-
-#### React Native Project
-
-```json:tsconfig.json
-{
-  "extends": "@okatechnology/eslint-config/tsconfig/tsconfig.react-native.json",
-  "include": [...],
-  "compilerOptions": {
-    "baseUrl": "./"
-  }
-}
-```
-
-#### Node.js Project
-
-```json:tsconfig.json
-{
-  "extends": "@okatechnology/eslint-config/tsconfig/tsconfig.node.json",
-  "include": [...],
-  "compilerOptions": {
-    "baseUrl": "./"
-  }
+  /* your config */
 }
 ```
