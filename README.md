@@ -1,5 +1,11 @@
 # ESLint / Prettier / TypeScript Config
 
+## Install
+
+```bash
+npm install --save-dev @okatechnology/eslint-config
+```
+
 ## Usage
 
 ### Config ESLint
