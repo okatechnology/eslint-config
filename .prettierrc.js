@@ -1,3 +1,3 @@
-module.exports = {
-  ...require('./prettierrc/prettierrc'),
-};
+import { prettierConfig } from './prettierrc/prettierrc.js';
+
+export default prettierConfig;
