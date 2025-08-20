@@ -98,6 +98,8 @@ export const eslintConfigBase = tseslint.config([
         },
       ],
 
+      '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
+
       'import/no-duplicates': 'warn',
       'import/newline-after-import': 'warn',
 

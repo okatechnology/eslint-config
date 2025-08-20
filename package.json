@@ -1,6 +1,6 @@
 {
   "name": "@okatechnology/eslint-config",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "description": "oka's eslint",
   "main": "index.js",
   "type": "module",
