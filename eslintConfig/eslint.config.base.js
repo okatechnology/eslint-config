@@ -123,6 +123,78 @@ export const eslintConfigBase = tseslint.config([
           defaultImportability: 'package',
         },
       ],
+
+      '@stylistic/padding-line-between-statements': [
+        'warn',
+        // 基本ルール: すべての要素間に空行
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: '*',
+        },
+        // import文同士は空行不要
+        {
+          blankLine: 'never',
+          prev: 'import',
+          next: 'import',
+        },
+        // 単一行の式、ブロック、const宣言同士は空行不要
+        {
+          blankLine: 'never',
+          prev: ['expression', 'block-like', 'singleline-const'],
+          next: ['expression', 'block-like', 'singleline-const'],
+        },
+        // 複数行の式やブロックの前後には必ず空行
+        {
+          blankLine: 'always',
+          prev: ['multiline-expression', 'multiline-block-like'],
+          next: '*',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: ['multiline-expression', 'multiline-block-like'],
+        },
+        // interface、type、export宣言の前後に必ず空行
+        {
+          blankLine: 'always',
+          prev: ['interface', 'type', 'export'],
+          next: '*',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: ['interface', 'type', 'export'],
+        },
+        // return文の前に必ず空行
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: 'return',
+        },
+        // 変数宣言後に空行（連続する変数宣言を除く）
+        {
+          blankLine: 'always',
+          prev: ['const', 'let', 'var'],
+          next: '*',
+        },
+        {
+          blankLine: 'any',
+          prev: ['const', 'let', 'var'],
+          next: ['const', 'let', 'var'],
+        },
+        // ディレクティブ後に空行
+        {
+          blankLine: 'always',
+          prev: 'directive',
+          next: '*',
+        },
+        {
+          blankLine: 'never',
+          prev: 'directive',
+          next: 'directive',
+        },
+      ],
     },
   },
 ]);

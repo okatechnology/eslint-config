@@ -36,9 +36,12 @@ export default [
 create `.prettierrc.js` at your project root and write the following.
 
 ```javascript:.prettierrc.js
-module.exports = {
-  ...require('@okatechnology/eslint-config/prettierrc/prettierrc'),
-}
+import { prettierConfig } from '@okatechnology/eslint-config/prettierrc/prettierrc.js';
+
+export default {
+  ...prettierConfig,
+  /* your config */
+};
 ```
 
 ### Config TypeScript
